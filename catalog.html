@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог</title>
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
   <body>
     <header class="page-header">
@@ -22,19 +23,19 @@
           </li>
         </ul>
         <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
-            <a class="navigation-link" href="tel:88005558628">+7 800 555-86-28</a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link navigation-user-tel" href="tel:88005558628">+7 800 555-86-28</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">Вход</a>
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">Вход</a>
           </li>
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-user-item">
+            <a class="navigation-user-link" href="#">
               <span class="visually-hidden">Корзина</span>
               2 товара
             </a>
@@ -64,7 +65,7 @@
           <fieldset class="filters-group">
             <legend class="filters-group-title">Сортировка:</legend>
             <label class="visually-hidden" for="sorting">Сортировать по</label>
-            <select name="sorting" class="sorting" id="sorting">
+            <select class="sorting" name="sorting" id="sorting">
               <option value="popular" selected>по популярности</option>
               <option value="price">по цене</option>
             </select>
