@@ -62,7 +62,7 @@
       <section class="catalog">
         <h2 class="visually-hidden">Каталог сливочного мороженого с фильтрами</h2>
         <form class="filters-form" method="post" action="https://echo.htmlacademy.ru/">
-          <fieldset class="filters-group">
+          <fieldset class="filters-group filters-group-sorting">
             <legend class="filters-group-title">Сортировка:</legend>
             <label class="visually-hidden" for="sorting">Сортировать по</label>
             <select class="sorting" name="sorting" id="sorting">
@@ -70,7 +70,7 @@
               <option value="price">по цене</option>
             </select>
           </fieldset>
-          <fieldset class="filters-group">
+          <fieldset class="filters-group filters-group-price">
             <legend class="filters-group-title">Цена: <span class="min-price">100</span> ₽ – <span class="max-price">500</span> ₽</legend>
             <input type="hidden" name="min-price" value="100">
             <input type="hidden" name="max-price" value="500">

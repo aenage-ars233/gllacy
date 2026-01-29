@@ -293,6 +293,7 @@ img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  row-gap: 30px;
 }
 
 .offer {
@@ -600,24 +601,44 @@ img {
 
 .delivery-form-fields {
   margin-bottom: 32px;
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 20px 16px;
 }
 
 .delivery-form-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
   font-weight: 700;
   line-height: 20px;
 }
 
-.info {}
+.info {
+  margin-left: 4px;
+}
 
-.delivery-field {}
+.delivery-field {
+  width: 100%;
+}
 
-.delivery-form-date {}
+.delivery-form-date {
+  margin: 0;
+}
 
-.delivery-form-tel {}
+.delivery-form-tel {
+  margin: 0;
+}
 
-.delivery-form-address {}
+.delivery-form-address {
+  margin: 0;
+  grid-column: 1/-1;
+}
 
 .delivery-form-submit {
+  display: block;
+  width: 152px;
+  margin: 0 auto;
   font-family: inherit;
   line-height: 20px;
   font-weight: 700;
@@ -744,21 +765,37 @@ img {
 
 /* Main inner */
 
-.main-inner {}
+.main-inner {
+  padding-top: 32px;
+}
 
 /* Inner header */
 
 .inner-header {
   width: 850px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .inner-header-title {
+  margin: 0;
+  order: 2;
   font-weight: 900;
   font-size: 32px;
   line-height: 46px;
 }
 
-.breadcrumbs {}
+.breadcrumbs {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: center;
+  list-style: none;
+}
 
 .breadcrumbs-item {}
 
@@ -776,24 +813,43 @@ img {
 
 /* Catalog */
 
-.catalog {}
+.catalog {
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(252, 252, 252, 0.3);
+}
 
 /* Filters */
 
 .filters-form {
   width: 823px;
+  margin-bottom: 44px;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 16px 24px;
 }
 
-.filters-group {}
+.filters-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
 
 .filters-group-title {
+  margin: 0;
+  padding-left: 16px;
+  margin-bottom: 8px;
   font-size: 14px;
   line-height: 20px;
 }
 
-.sorting {}
+.sorting {
+  width: 196px;
+}
+
+.filters-group-price {
+  width: 196px;
+}
 
 .range-toggle {}
 
@@ -802,6 +858,14 @@ img {
 .range-toggle-max {}
 
 .radio-list {
+  width: 383px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
   background-color: rgba(252, 252, 252, 0.3);
 }
 
@@ -813,6 +877,14 @@ img {
 }
 
 .checkbox-list {
+  width: 604px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
   background-color: rgba(252, 252, 252, 0.3);
 }
 
@@ -824,6 +896,10 @@ img {
 }
 
 .filters-submit {
+  display: block;
+  width: 185px;
+  margin-left: -8px;
+  align-self: flex-end;
   font-family: inherit;
   font-weight: 700;
   font-size: 14px;
@@ -833,31 +909,59 @@ img {
 
 /* Cards */
 
-.cards-list {}
+.cards-list {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 40px 30px;
+  list-style: none;
+}
 
-.card {}
+.card {
+  width: 270px;
+}
 
 .card-image {
+  display: block;
+  width: 168px;
+  height: 168px;
+  margin: 0 auto;
+  margin-bottom: -113px;
   border-radius: 50%;
 }
 
 .card-content {
+  padding-top: 133px;
+  padding-right: 40px;
+  padding-bottom: 24px;
+  padding-left: 40px;
   background-color: #FCFCFC;
+  border-radius: 8px;
 }
 
 .card-title {
+  margin: 0;
+  margin-bottom: 8px;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
 }
 
 .card-description {
+  margin: 0;
+  margin-bottom: 16px;
   line-height: 22px;
   text-align: center;
   color: #565C66;
 }
 
-.card-buy {}
+.card-buy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .card-price {
   font-weight: 700;
@@ -865,13 +969,19 @@ img {
 }
 
 .card-button {
+  width: 32px;
+  height: 32px;
   background-color: #FF2F64;
+  border-radius: 50%;
   color: #FFFFFF;
   text-decoration: none;
 }
 
+/* Catalog controls */
+
 .catalog-controls {
   display: flex;
+  align-items: center;
 }
 
 .catalog-more {
@@ -879,7 +989,14 @@ img {
 }
 
 .pagination-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   margin-left: auto;
+  max-width: 210px;
 }
 
 .pagination-item {}
@@ -887,18 +1004,23 @@ img {
 .pagination-prev {
   color: inherit;
   text-decoration: none;
+  margin-right: 8px;
 }
 
 .pagination-next {
+  margin-left: 8px;
   color: inherit;
   text-decoration: none;
 }
 
 .pagination-link {
+  display: block;
+  padding: 2px 7px;
   color: inherit;
   text-decoration: none;
 }
 
 .pagination-link-current {
   background-color: #FCFCFC;
+  border-radius: 50%;
 }
