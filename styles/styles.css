@@ -980,6 +980,8 @@ img {
 /* Catalog controls */
 
 .catalog-controls {
+  padding-top: 41px;
+  padding-bottom: 41px;
   display: flex;
   align-items: center;
 }
