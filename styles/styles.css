@@ -62,14 +62,18 @@ img {
 }
 
 .button {
+  display: inline-block;
+  padding: 12px 32px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   color: #2D3440;
   background-color: #FCFCFC;
+  border-radius: 26px;
   text-decoration: none;
   text-align: center;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 }
 
 /* Header */
@@ -930,6 +934,7 @@ img {
   margin: 0 auto;
   margin-bottom: -113px;
   border-radius: 50%;
+  box-shadow: 0 4px 12px 0 rgba(45, 52, 64, 0.1);
 }
 
 .card-content {
