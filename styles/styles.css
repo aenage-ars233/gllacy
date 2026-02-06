@@ -232,8 +232,6 @@ img {
   flex-grow: 1;
 }
 
-.main-index {}
-
 /* Slider */
 
 .slider {
@@ -347,7 +345,30 @@ img {
   cursor: pointer;
 }
 
-.slider-prev {}
+.slider-button:hover {
+  background-color: #FCFCFC;
+}
+
+.slider-button:focus {
+  background-color: rgba(252, 252, 252, 0.3);
+  border-color: #2D3440;
+  outline: none;
+}
+
+.slider-button:active {
+  background-color: rgba(252, 252, 252, 0.5);
+  border-color: rgba(252, 252, 252, 0.5);
+}
+
+.slider-button:hover path,
+.slider-button:focus path,
+.slider-button:active path {
+  fill: #2D3440;
+}
+
+.slider-prev {
+  transform: rotate(180deg);
+}
 
 .slider-next {}
 
@@ -378,9 +399,27 @@ img {
   cursor: pointer;
 }
 
-.slider-pagination-item-current .slider-pagination-button {
+.slider-pagination-button:hover {
+  outline: 1px solid #FCFCFC;
+  outline-offset: 0;
+}
+
+.slider-pagination-button:focus {
+  outline: 1px solid #2D3440;
+}
+
+.slider-pagination-button:active {
+  background-color: #FCFCFC;
+  outline: none;
+}
+
+.slider-pagination-item-current .slider-pagination-button,
+.slider-pagination-item-current .slider-pagination-button:hover,
+.slider-pagination-item-current .slider-pagination-button:focus,
+.slider-pagination-item-current .slider-pagination-button:active {
   background-color: #FCFCFC;
   cursor: default;
+  outline: none;
 }
 
 .slider .social {
