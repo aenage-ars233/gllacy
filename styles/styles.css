@@ -135,8 +135,6 @@ img {
   list-style: none;
 }
 
-.navigation-item {}
-
 .navigation-link {
   display: block;
   padding: 8px 16px;
@@ -370,8 +368,6 @@ img {
   transform: rotate(180deg);
 }
 
-.slider-next {}
-
 .slider-pagination {
   position: absolute;
   bottom: 0;
@@ -383,10 +379,6 @@ img {
   gap: 8px;
   flex-wrap: wrap;
 }
-
-.slider-pagination-item {}
-
-.slider-pagination-item-current {}
 
 .slider-pagination-button {
   display: block;
@@ -746,6 +738,33 @@ img {
 
 .newsletter-field {
   width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #B9B9B9;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.newsletter-field::placeholder {
+  color: #B9B9B9;
+}
+
+.newsletter-field:hover {
+  border-color: #2D3440;
+}
+
+.newsletter-field:focus {
+  outline: 1px solid #2D3440;
+  border-color: #2D3440;
+}
+
+.newsletter-field:disabled {
+  border-color: #B9B9B9;
+  color: rgba(45, 52, 64, 0.65);
+  background-color: #E7E7E7;
 }
 
 .newsletter-submit {
@@ -865,6 +884,33 @@ img {
 
 .delivery-field {
   width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #B9B9B9;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.delivery-field::placeholder {
+  color: #B9B9B9;
+}
+
+.delivery-field:hover {
+  border-color: #2D3440;
+}
+
+.delivery-field:focus {
+  outline: 1px solid #2D3440;
+  border-color: #2D3440;
+}
+
+.delivery-field:disabled {
+  border-color: #B9B9B9;
+  color: rgba(45, 52, 64, 0.65);
+  background-color: #E7E7E7;
 }
 
 .delivery-form-date {
@@ -1040,6 +1086,7 @@ img {
 
 .footer-link {
   display: block;
+  min-width: 156px;
   padding-left: 16px;
   font-size: 14px;
   line-height: 20px;
@@ -1071,8 +1118,6 @@ img {
   gap: 12px;
   flex-wrap: wrap;
 }
-
-.social-item {}
 
 .social-link {
   display: flex;
@@ -1194,60 +1239,235 @@ img {
   margin: 0;
   padding-left: 16px;
   margin-bottom: 8px;
+  font-weight: 400;
   font-size: 14px;
   line-height: 20px;
 }
 
+.sorting-container {
+  position: relative;
+}
+
 .sorting {
   width: 196px;
+  padding: 8px 10px 8px 16px;
+  border: none;
+  font: inherit;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.sorting:hover {
+  background-color: rgba(252, 252, 252, 0.5);
+}
+
+.sorting:focus {
+  background-color: rgba(252, 252, 252, 0.5);
+  outline: 2px solid #FCFCFC;
+  outline-offset: 0;
+}
+
+.sorting-container::after {
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  content: "";
+  width: 16px;
+  height: 16px;
+  font-size: 14px;
+  background-image: url("../images/icons/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .filters-group-price {
   width: 196px;
 }
 
-.range-toggle {}
+.range-container {
+  padding: 17px 16px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+}
 
-.range-toggle-min {}
+.range {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(86, 92, 102, 0.3);
+}
 
-.range-toggle-max {}
+.range-bar {
+  position: absolute;
+  height: 2px;
+  background-color: rgba(86, 92, 102, 1);
+}
+
+.range-toggle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  background-color: #2D3440;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.range-toggle::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #FCFCFC;
+  border-radius: 50%;
+}
+
+.range-toggle:hover {
+  background-color: #FCFCFC;
+}
+
+.range-toggle:hover::before {
+  background-color: #2D3440;
+}
+
+.range-toggle:focus {
+  outline: 2px solid #2D3440;
+  outline-offset: 0;
+  background-color: #FCFCFC;
+}
+
+.range-toggle:focus::before {
+  background-color: #2D3440;
+}
+
+.range-toggle:active,
+.range-toggle:active::before {
+  background-color: #2D3440;
+  outline: none;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  right: 0;
+}
 
 .radio-list {
   width: 383px;
   margin: 0;
-  padding: 0;
+  padding: 8px 24px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   list-style: none;
   background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
 }
 
-.radio-item {}
-
 .radio-label {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 20px;
+}
+
+.radio-mark {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #2D3440;
+  border-radius: 50%;
+}
+
+.radio-label input[type="radio"]:checked + .radio-mark::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #2D3440;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.radio-label:hover .radio-mark {
+  border-color: #FCFCFC;
+}
+
+.radio-label:hover input[type="radio"]:checked + .radio-mark::before {
+  background-color: #FCFCFC;
+}
+
+.radio-label input[type="radio"]:disabled + .radio-mark,
+.radio-label:hover input[type="radio"]:disabled + .radio-mark {
+  border-color: #2D3440;
+  opacity: 0.5;
+}
+
+.radio-label:hover input[type="radio"]:disabled + .radio-mark::before {
+  background-color: #2D3440;
 }
 
 .checkbox-list {
   width: 604px;
   margin: 0;
-  padding: 0;
+  padding: 10px 24px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
   list-style: none;
   background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 18px;
 }
 
-.checkbox-item {}
-
 .checkbox-label {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 20px;
+}
+
+.checkbox-mark {
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.checkbox-mark-icon-checked {
+  display: none;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-mark > .checkbox-mark-icon-checked {
+  display: block;
+}
+
+.checkbox-label input[type="checkbox"]:checked + .checkbox-mark > .checkbox-mark-icon {
+  display: none;
+}
+
+.checkbox-label:hover path {
+  fill: #FCFCFC;
+}
+
+.checkbox-label input[type="checkbox"]:disabled + .checkbox-mark path,
+.checkbox-label:hover input[type="checkbox"]:disabled + .checkbox-mark path {
+  opacity: 0.5;
+  fill: #2D3440;
 }
 
 .filters-submit {
@@ -1425,8 +1645,6 @@ img {
   margin-left: auto;
   max-width: 210px;
 }
-
-.pagination-item {}
 
 .pagination-prev {
   display: block;
