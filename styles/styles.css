@@ -143,6 +143,42 @@ img {
   cursor: default;
 }
 
+.field {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #B9B9B9;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2D3440;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+}
+
+.field::placeholder {
+  color: #B9B9B9;
+}
+
+.field:hover {
+  border-color: #2D3440;
+}
+
+.field:focus {
+  outline: 1px solid #2D3440;
+  border-color: #2D3440;
+}
+
+.field:disabled,
+.field:disabled:hover {
+  border-color: #B9B9B9;
+  color: rgba(45, 52, 64, 0.65);
+  background-color: #E7E7E7;
+}
+
+.field.field-error {
+  border-color: #EA5454;
+}
+
 /* Header */
 
 .page-header {
@@ -394,24 +430,6 @@ img {
   border-radius: 4px;
 }
 
-.search-field {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #B9B9B9;
-  background-color: #FCFCFC;
-  border-radius: 4px;
-  font: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2D3440;
-}
-
-.search-field::placeholder {
-  font-size: 16px;
-  line-height: 20px;
-  color: #B9B9B9;
-}
-
 .search-field::-webkit-search-cancel-button {
   width: 16px;
   height: 16px;
@@ -420,10 +438,6 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-}
-
-.search-field:focus {
-  outline: none;
 }
 
 .login {
@@ -454,25 +468,6 @@ img {
   line-height: 30px;
   font-weight: 700;
   color: #2D3440;
-}
-
-.login-field {
-  width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 16px;
-  border: 1px solid #B9B9B9;
-  font: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2D3440;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-}
-
-.login-field::placeholder {
-  font-size: 16px;
-  line-height: 20px;
-  color: #B9B9B9;
 }
 
 .login-controls {
@@ -1144,41 +1139,6 @@ img {
   margin-right: 16px;
 }
 
-.newsletter-field {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #B9B9B9;
-  font: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2D3440;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-}
-
-.newsletter-field::placeholder {
-  color: #B9B9B9;
-}
-
-.newsletter-field:hover {
-  border-color: #2D3440;
-}
-
-.newsletter-field:focus {
-  outline: 1px solid #2D3440;
-  border-color: #2D3440;
-}
-
-.newsletter-field:disabled {
-  border-color: #B9B9B9;
-  color: rgba(45, 52, 64, 0.65);
-  background-color: #E7E7E7;
-}
-
-.newsletter-field.field-error {
-  border-color: #EA5454;
-}
-
 /* Delivery */
 
 .delivery {
@@ -1251,37 +1211,6 @@ img {
   border: none;
   background-color: transparent;
   cursor: pointer;
-}
-
-.delivery-field {
-  width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #B9B9B9;
-  font: inherit;
-  font-size: 16px;
-  line-height: 20px;
-  color: #2D3440;
-  background-color: #FFFFFF;
-  border-radius: 4px;
-}
-
-.delivery-field::placeholder {
-  color: #B9B9B9;
-}
-
-.delivery-field:hover {
-  border-color: #2D3440;
-}
-
-.delivery-field:focus {
-  outline: 1px solid #2D3440;
-  border-color: #2D3440;
-}
-
-.delivery-field:disabled {
-  border-color: #B9B9B9;
-  color: rgba(45, 52, 64, 0.65);
-  background-color: #E7E7E7;
 }
 
 .delivery-form-date {
@@ -1444,6 +1373,71 @@ img {
 
 .copyright-link {
   color: inherit;
+}
+
+/* Modal */
+
+.modal-container {
+  display: none;
+}
+
+.modal-opened {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: rgba(45, 52, 64, 0.3);
+}
+
+.modal-feedback {
+  position: relative;
+  width: 570px;
+  margin: auto;
+  padding: 64px 64px 66px 64px;
+  background-color: #FCFCFC;
+  border-radius: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../images/icons/close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 32px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #2D3440;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-form textarea {
+  resize: none;
+}
+
+.modal-form-submit {
+  margin-top: 16px;
+  margin-left: auto;
 }
 
 /* Main inner */

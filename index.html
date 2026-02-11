@@ -62,7 +62,7 @@
               <form class="search-form" action="#" method="post">
                 <label>
                   <span class="visually-hidden">Поиск по сайту</span>
-                  <input class="search-field" type="search" name="search" placeholder="Поиск по сайту" required>
+                  <input class="field" type="search" name="search" placeholder="Поиск по сайту" required>
                 </label>
               </form>
             </div>
@@ -78,9 +78,9 @@
               <h3 class="login-popover-title">Личный кабинет</h3>
               <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="login-email">Ваш email</label>
-                <input class="login-field" type="email" name="email" id="login-email" placeholder="email@example.com" required>
+                <input class="field" type="email" name="email" id="login-email" placeholder="email@example.com" required>
                 <label class="visually-hidden" for="login-password">Ваш пароль</label>
-                <input class="login-field" type="password" name="password" id="login-password" placeholder="Пароль" required>
+                <input class="field" type="password" name="password" id="login-password" placeholder="Пароль" required>
                 <div class="login-controls">
                   <button class="login-submit button-secondary" type="submit">Войти</button>
                   <ul class="login-links">
@@ -354,7 +354,7 @@
             <form class="newsletter-form" method="post" action="https://echo.htmlacademy.ru/">
               <label class="newsletter-label">
                 <span class="visually-hidden">Ваш email:</span>
-                <input class="newsletter-field" type="email" name="email" placeholder="email@example.com" required>
+                <input class="field" type="email" name="email" placeholder="email@example.com" required>
               </label>
               <button class="newsletter-submit button-secondary" type="submit">Отправить</button>
             </form>
@@ -381,13 +381,13 @@
                   </svg>
                 </button>
               </span>
-              <input class="delivery-field" type="text" name="date" id="delivery-date" placeholder="01.04.2020">
+              <input class="field" type="text" name="date" id="delivery-date" placeholder="01.04.2020">
             </p>
             <p class="delivery-form-tel">
               <span class="delivery-form-label">
                 <label for="delivery-phone">Телефон</label>
               </span>
-              <input class="delivery-field" type="tel" name="phone" id="delivery-phone" placeholder="+7 800 999-00-00" required>
+              <input class="field" type="tel" name="phone" id="delivery-phone" placeholder="+7 800 999-00-00" required>
             </p>
             <p class="delivery-form-address">
               <span class="delivery-form-label">
@@ -399,7 +399,7 @@
                   </svg>
                 </button>
               </span>
-              <input class="delivery-field" type="text" name="address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
+              <input class="field" type="text" name="address" id="delivery-address" placeholder="ул. Большая Конюшенная, 19/8">
             </p>
           </div>
           <button class="delivery-form-submit button-secondary" type="submit">Отправить</button>
@@ -470,6 +470,31 @@
         <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/">.html academy</a> © 2021</p>
       </div>
     </footer>
+    <div class="modal-container">
+      <div class="modal-feedback">
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+        <section class="modal-section">
+          <h2 class="modal-title">Мы обязательно ответим вам!</h2>
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+            <label>
+              <span class="visually-hidden">Имя и фамилия</span>
+              <input class="field" type="text" name="name" placeholder="Имя и фамилия" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Email</span>
+              <input class="field" type="email" name="email" placeholder="email@example.com" required>
+            </label>
+            <label>
+              <span class="visually-hidden">Обращение</span>
+              <textarea class="field" name="greeting" placeholder="В свободной форме" rows="6"></textarea>
+            </label>
+            <button class="modal-form-submit button-secondary" type="submit">Отправить</button>
+          </form>
+        </section>
+      </div>
+    </div>
     <script>
       const subMenuButton = document.querySelector('.sub-menu');
       subMenuButton.addEventListener('click', () => {
