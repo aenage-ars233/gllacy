@@ -38,6 +38,7 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  min-width: 1366px;
   min-height: 100%;
   font-family: "Inter", "Arial", sans-serif;
   font-size: 16px;
@@ -218,7 +219,7 @@ img {
 
 .navigation-link {
   display: block;
-  padding: 8px 16px;
+  padding: 8px 18px;
   line-height: 20px;
   color: inherit;
   text-decoration: none;
@@ -241,15 +242,22 @@ img {
   outline: none;
 }
 
+.navigation-item:last-child .navigation-link {
+  padding-left: 14px;
+}
+
 .sub-menu {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 6px;
   border: none;
   font: inherit;
   background-color: transparent;
   cursor: pointer;
+}
+
+.sub-menu svg {
+  margin-left: 8px;
 }
 
 .sub-menu-open {
@@ -339,7 +347,7 @@ img {
 .navigation-user {
   justify-content: flex-end;
   gap: 16px;
-  width: 456px;
+  max-width: 470px;
   margin-left: auto;
 }
 
@@ -470,6 +478,10 @@ img {
   color: #2D3440;
 }
 
+.login-field {
+  margin-bottom: 16px;
+}
+
 .login-controls {
   margin-top: 16px;
   display: flex;
@@ -478,6 +490,7 @@ img {
 
 .login-submit {
   max-width: 200px;
+  margin-right: 23px;
 }
 
 .login-links {
@@ -633,6 +646,7 @@ img {
 }
 
 .slider-content {
+  padding-top: 116px;
   width: 430px;
   margin-right: 25px;
 }
@@ -648,11 +662,16 @@ img {
 
 .slider-description {
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 47px;
   font-size: 18px;
 }
 
+.slider-link {
+  margin-bottom: 126px;
+}
+
 .slider-slideshow {
+  position: relative;
   width: 645px;
   display: flex;
   gap: 38px;
@@ -724,11 +743,10 @@ img {
   opacity: 1;
 }
 
-
 .slider-controls {
   position: absolute;
-  top: 258px;
-  left: 525px;
+  top: 226px;
+  left: 0;
   width: 367px;
   display: flex;
   justify-content: space-between;
@@ -772,9 +790,9 @@ img {
 }
 
 .slider-pagination {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  right: 70px;
+  max-width: 512px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -822,6 +840,7 @@ img {
   bottom: 0;
   right: 0;
   min-width: 105px;
+  max-width: 204px;
 }
 
 /* Offers */
@@ -877,9 +896,10 @@ img {
   line-height: 30px;
 }
 
-.offer-desfription {
+.offer-description {
+  width: 304px;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 28px;
   line-height: 22px;
 }
 
@@ -903,8 +923,8 @@ img {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, 270px);
+  display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -1090,7 +1110,7 @@ img {
 
 .news-title {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -1117,6 +1137,7 @@ img {
 }
 
 .newsletter-content {
+  height: 100%;
   padding: 26px;
   background-color: #FFFFFF;
   border-radius: 16px;
@@ -1155,6 +1176,7 @@ img {
 }
 
 .delivery-content {
+  padding-top: 3px;
   width: 371px;
   margin-right: 135px;
 }
@@ -1246,6 +1268,7 @@ img {
 .contacts-content {
   width: 343px;
   padding: 40px;
+  padding-top: 37px;
   background-color: #FCFCFC;
   border-radius: 8px;
 }
@@ -1296,11 +1319,12 @@ img {
   padding-bottom: 48px;
   margin: 0 auto;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
 .footer-links-list {
-  width: 356px;
+  width: 376px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1313,7 +1337,7 @@ img {
 .footer-link {
   display: block;
   min-width: 156px;
-  padding-left: 16px;
+  padding-left: 28px;
   font-size: 14px;
   line-height: 20px;
   text-decoration: none;
@@ -1337,11 +1361,12 @@ img {
 }
 
 .social {
+  max-width: 204px;
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 15px;
   flex-wrap: wrap;
 }
 
@@ -1513,7 +1538,7 @@ img {
 
 .filters-form {
   width: 823px;
-  margin-bottom: 44px;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -1809,7 +1834,7 @@ img {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(4, 270px);
-  gap: 40px 30px;
+  gap: 36px 30px;
   list-style: none;
 }
 
@@ -1922,6 +1947,7 @@ img {
 }
 
 .catalog-more {
+  max-width: 377px;
   margin-left: 488px;
   border: none;
 }
@@ -1933,6 +1959,7 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 5px 2px;
   margin-left: auto;
   max-width: 210px;
 }
@@ -1951,7 +1978,7 @@ img {
 
 .pagination-next {
   display: block;
-  margin-left: 10px;
+  margin-left: 8px;
   color: inherit;
   text-decoration: none;
 }
